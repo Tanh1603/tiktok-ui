@@ -1,16 +1,20 @@
 .wrapper {
+    display: inline-flex;
+    align-items: center;
     font-size: 1.6rem;
     padding: 9px 16px;
     border-radius: 4px;
 
     font-weight: 700;
     min-width: 100px;
+    text-align: center;
+    justify-content: center;
     cursor: pointer;
     background-color: white;
     border: 1px solid transparent;
     user-select: none;
-    & +.wrapper {
-        margin-left: 8x;
+    & + .wrapper {
+        margin-left: 8px;
     }
 
     &.disabled {
@@ -30,7 +34,7 @@
 .primary {
     background-color: var(--primary-color);
     color: white;
-    
+
     &:hover {
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.06)), rgb(254, 44, 85);
     }
@@ -57,3 +61,11 @@
     }
 }
 
+.icon + .title,
+.title + .icon {
+    margin-left: 8px;
+}
+.icon {
+    display: inline-block;
+    width: 20px;
+}
